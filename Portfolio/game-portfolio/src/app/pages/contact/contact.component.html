@@ -1,0 +1,49 @@
+<div class="contact-screen">
+  <div class="contact-card">
+    <p class="small terminal-label">CONTACT TERMINAL</p>
+    <h2 class="terminal-title">Send a Message</h2>
+
+    <form class="contact-form" (ngSubmit)="sendMessage()" #f="ngForm">
+      <div class="row">
+        <input
+          class="input"
+          type="text"
+          name="name"
+          [(ngModel)]="name"
+          placeholder="Your name"
+          required
+        />
+
+        <input
+          class="input"
+          type="email"
+          name="email"
+          [(ngModel)]="email"
+          placeholder="Your email"
+          required
+          email
+        />
+      </div>
+
+      <textarea
+        class="input"
+        name="message"
+        [(ngModel)]="message"
+        placeholder="Your message"
+        required
+      ></textarea>
+
+      <button class="btn primary" type="submit" [disabled]="f.invalid || loading">
+        {{ loading ? 'Sending...' : 'Send Message' }}
+      </button>
+
+      <p *ngIf="success" class="small" style="margin-top:10px; color:#9fffd7;">
+        ✅ Message sent!
+      </p>
+
+      <p *ngIf="error" class="small" style="margin-top:10px; color:#ff7aa8;">
+        ❌ Error sending message
+      </p>
+    </form>
+  </div>
+</div>

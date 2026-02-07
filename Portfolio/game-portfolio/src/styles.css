@@ -1,0 +1,337 @@
+/* =========================
+   MINECRAFT UI • LIGHT PINK
+   ========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root{
+  /* Background */
+  --bg0:#1b1024;
+  --bg1:#24132e;
+
+  /* Panels */
+  --panel:#2a1638;
+  --panel2:#341a46;
+
+  /* Text */
+  --text:#fff3fb;
+  --muted:#e2b6d9;
+
+  /* Pink theme */
+  --pink:#ff9ad5;
+  --pink-soft:#ffd6ea;
+  --pink-dark:#d86bb6;
+
+  /* UI */
+  --border: #ff9ad5;
+  --shadow: 4px 4px 0 rgba(0,0,0,.45);
+
+  /* Blocky radiuses */
+  --radius: 6px;
+  --radius2: 8px;
+
+  /* Fonts */
+  --pixel: "Press Start 2P", monospace;
+}
+
+/* ===== Base ===== */
+*{ box-sizing: border-box; }
+
+html, body{
+  height:100%;
+}
+
+body{
+  margin:0;
+  color:var(--text);
+  font-family: var(--pixel);
+  line-height: 1.6;
+
+  /* Minecraft-like repeating pattern */
+  background:
+    repeating-linear-gradient(
+      45deg,
+      #1b1024,
+      #1b1024 20px,
+      #20122c 20px,
+      #20122c 40px
+    );
+  min-height:100vh;
+  overflow-x:hidden;
+}
+
+/* Links */
+a{
+  color: var(--pink-soft);
+  text-decoration: none;
+}
+a:hover{ color: var(--pink); }
+
+/* ===== Layout ===== */
+.container{
+  width: min(1100px, calc(100% - 32px));
+  margin: 26px auto;
+}
+
+/* Titles */
+h1,h2,h3{
+  margin: 0 0 10px;
+  font-family: var(--pixel);
+  letter-spacing: .5px;
+}
+h1{ font-size: 26px; }
+h2{ font-size: 18px; }
+h3{ font-size: 13px; }
+
+.small{
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: .6px;
+  text-transform: uppercase;
+}
+
+/* ===== Minecraft Panel / Card ===== */
+.card{
+  background: linear-gradient(180deg, var(--panel), var(--panel2));
+  border: 3px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+
+/* A slightly smaller card option */
+.card.compact{
+  padding: 14px;
+}
+
+/* Hover effect (subtle) */
+.card:hover{
+  filter: brightness(1.05);
+}
+
+/* ===== Buttons (Minecraft style) ===== */
+.btn, button.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+
+  background: var(--pink);
+  color: #1b1024;
+
+  border: 3px solid #000;
+  border-radius: 4px;
+
+  font-family: var(--pixel);
+  font-size: 11px;
+  padding: 12px 16px;
+
+  cursor:pointer;
+
+  box-shadow:
+    inset -3px -3px 0 rgba(0,0,0,.30),
+    3px 3px 0 rgba(0,0,0,.45);
+  transition: transform .08s ease, filter .12s ease;
+}
+
+.btn:hover{
+  background: var(--pink-soft);
+  filter: saturate(1.05);
+}
+
+.btn:active{
+  transform: translate(2px, 2px);
+  box-shadow:
+    inset 3px 3px 0 rgba(0,0,0,.30);
+}
+
+.btn.primary{
+  background: linear-gradient(180deg, var(--pink-soft), var(--pink));
+}
+
+.btn.secondary{
+  background: rgba(255,154,213,.25);
+  color: var(--pink-soft);
+  border-color: var(--pink);
+  box-shadow: var(--shadow);
+}
+
+/* ===== Inputs ===== */
+.input, textarea{
+  width: 100%;
+  background: #1b1024;
+  color: var(--text);
+
+  border: 3px solid var(--pink-dark);
+  border-radius: 4px;
+
+  padding: 12px;
+  font-family: var(--pixel);
+  font-size: 11px;
+
+  outline: none;
+}
+
+.input::placeholder, textarea::placeholder{
+  color: rgba(255,243,251,.55);
+}
+
+.input:focus, textarea:focus{
+  border-color: var(--pink);
+  background: #24132e;
+}
+
+textarea{
+  resize: vertical;
+  min-height: 130px;
+}
+
+/* ===== Navbar (simple Minecraft bar) ===== */
+.navbar{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+
+  background: rgba(27,16,36,.90);
+  backdrop-filter: blur(6px);
+
+  border-bottom: 3px solid rgba(255,154,213,.35);
+}
+
+.nav-inner{
+  width: min(1100px, calc(100% - 32px));
+  margin: 0 auto;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 16px;
+
+  padding: 14px 0;
+}
+
+.brand{
+  font-size: 12px;
+  color: var(--pink-soft);
+  letter-spacing: 1px;
+}
+
+.nav-links{
+  display:flex;
+  gap: 14px;
+  align-items:center;
+}
+
+.nav-link{
+  font-size: 11px;
+  color: var(--muted);
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 2px solid transparent;
+}
+
+.nav-link:hover{
+  color: var(--pink-soft);
+  border-color: rgba(255,154,213,.35);
+  background: rgba(255,154,213,.10);
+}
+
+.nav-link.active{
+  color: #1b1024;
+  background: var(--pink);
+  border-color: #000;
+  box-shadow: 2px 2px 0 rgba(0,0,0,.45);
+}
+
+/* ===== Grid helpers ===== */
+.grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+
+/* ===== Contact Page (center but higher) ===== */
+.contact-screen{
+  min-height: calc(100vh - 90px);
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  padding-top: 110px;  /* move higher */
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.contact-card{
+  width:100%;
+  max-width: 650px;
+  
+  background: linear-gradient(180deg, var(--panel), var(--panel2));
+  border: 3px solid var(--pink);
+  border-radius: var(--radius);
+
+  padding: 30px;
+  box-shadow: var(--shadow);
+}
+
+.terminal-label{
+  font-size: 10px;
+  color: var(--pink-soft);
+  opacity: .85;
+  margin: 0 0 10px;
+}
+
+.terminal-title{
+  font-size: 18px;
+  color: var(--pink);
+  margin: 0 0 18px;
+}
+
+.contact-form{
+  display:flex;
+  flex-direction:column;
+  gap: 14px;
+}
+
+.contact-form .row{
+  display:flex;
+  gap: 10px;
+}
+
+/* send button right */
+.contact-form button{
+  align-self:flex-end;
+}
+
+/* ===== Lists ===== */
+ul{
+  margin: 10px 0 0;
+  padding-left: 18px;
+}
+li{
+  margin: 6px 0;
+  color: rgba(255,243,251,.92);
+}
+b{
+  color: var(--pink-soft);
+}
+
+/* ===== Badge ===== */
+.badge{
+  display:inline-flex;
+  align-items:center;
+  padding: 6px 10px;
+  border: 2px solid rgba(255,154,213,.55);
+  border-radius: 6px;
+  background: rgba(255,154,213,.12);
+  color: var(--pink-soft);
+  font-size: 10px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 640px){
+  h1{ font-size: 22px; }
+  .nav-links{ gap: 8px; }
+  .contact-form .row{ flex-direction:column; }
+  .contact-form button{ width:100%; }
+}
