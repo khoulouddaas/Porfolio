@@ -40,10 +40,6 @@ src/app/pages/      home, experience, projects, contact
 src/app/services/   contact service
 ```
 
-## Contact form
-
-The form sends messages through `ContactService` (`src/app/services/contact.service.ts`). It needs a backend endpoint to work. Without it, the form shows an error message.
-
 ## Contact
 
 - Email: daaskhouloud1@gmail.com
