@@ -1,33 +1,32 @@
-<div class="container">
-  <div class="card">
-    <h2>Compétences</h2>
+<div class="page">
+  <h2>Expérience</h2>
+  <p class="lead">Deux stages, deux rôles : l'infrastructure, puis le développement full-stack.</p>
 
-    <div class="grid">
-      
-      <!-- Compétences techniques -->
-      <div class="card compact">
-        <h3>Compétences techniques</h3>
-        <ul>
-          <li>HTML, CSS, JavaScript, PHP</li>
-          <li>Stack MERN (MongoDB, Express.js, React.js, Node.js)</li>
-          <li>Git & gestion de versions</li>
-          <li>FlutterFlow (développement mobile)</li>
-          <li>Photoshop (bases)</li>
-        </ul>
-      </div>
+  <div class="timeline">
+    <article class="entry">
+      <p class="when">2026</p>
+      <h3>Stagiaire Ingénieure Infrastructure / DevOps</h3>
+      <p class="where">Inission Tunis</p>
+      <ul>
+        <li>Piloté seule la reconstruction complète de l'infrastructure après une attaque ransomware : migration de 3 VM de VMware ESXi vers Proxmox VE sur deux serveurs physiques (Dell PowerEdge T620, HP ProLiant ML350p Gen8), services restaurés sans perte de données.</li>
+        <li>Migré une VM vers un conteneur LXC pour réduire l'empreinte des ressources.</li>
+        <li>Conçu et déployé un stockage résilient (ZFS/RAIDZ1) et un cluster HA, et résolu seule un incident de désynchronisation de réplication entre nœuds.</li>
+        <li>Mis en place Proxmox Backup Server et automatisé la réplication et le basculement HA avec des scripts Bash et Ansible.</li>
+        <li>Réparti les services entre VM et conteneurs LXC (GitLab CE, applications Django) et récupéré une VM legacy Windows XP après une erreur de démarrage (STOP 0x0000007B) via export/import OVF.</li>
+      </ul>
+    </article>
 
-      <!-- Compétences personnelles -->
-      <div class="card compact">
-        <h3>Compétences personnelles</h3>
-        <ul>
-          <li>Travail en équipe</li>
-          <li>Esprit d’analyse et résolution de problèmes</li>
-          <li>Autonomie et sens des responsabilités</li>
-          <li>Adaptabilité et amélioration continue</li>
-          <li>Attention aux détails</li>
-        </ul>
-      </div>
+    <article class="entry">
+      <p class="when">2025</p>
+      <h3>Stagiaire Développeuse Full-Stack</h3>
+      <p class="where">Nefel Education</p>
+      <ul>
+        <li>Développé DevsOnDeck, une plateforme MERN qui met en relation développeurs et entreprises par matching de compétences techniques (jusqu'à 5 par profil ou poste).</li>
+        <li>Conçu seule l'API REST (Node.js, Express.js) et tout le frontend en React.js, avec modélisation MongoDB.</li>
+        <li>Géré tout le cycle de développement : Git, tests et déploiement.</li>
+      </ul>
+    </article>
 
-    </div>
+   
   </div>
 </div>

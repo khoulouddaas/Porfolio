@@ -1,49 +1,29 @@
-<div class="contact-screen">
-  <div class="contact-card">
-    <p class="small terminal-label">CONTACT TERMINAL</p>
-    <h2 class="terminal-title">Send a Message</h2>
+<div class="page">
+  <div class="contact-wrap">
+    <div>
+      <h2>Me contacter</h2>
+      <p class="lead">Un stage PFE, un projet, une question ? Écrivez-moi.</p>
+      <ul class="contact-info">
+        <li><span>Email</span><a href="mailto:daaskhouloud1@gmail.com">daaskhouloud1&#64;gmail.com</a></li>
+        <li><span>Téléphone</span><a href="tel:+21653164043">+216 53 164 043</a></li>
+        <li><span>LinkedIn</span><a href="https://linkedin.com/in/khouloud-daas" target="_blank" rel="noopener">linkedin.com/in/khouloud-daas</a></li>
+        <li><span>GitHub</span><a href="https://github.com/khoulouddaas" target="_blank" rel="noopener">github.com/khoulouddaas</a></li>
+      </ul>
+    </div>
 
     <form class="contact-form" (ngSubmit)="sendMessage()" #f="ngForm">
       <div class="row">
-        <input
-          class="input"
-          type="text"
-          name="name"
-          [(ngModel)]="name"
-          placeholder="Your name"
-          required
-        />
-
-        <input
-          class="input"
-          type="email"
-          name="email"
-          [(ngModel)]="email"
-          placeholder="Your email"
-          required
-          email
-        />
+        <input class="input" type="text" name="name" [(ngModel)]="name" placeholder="Votre nom" aria-label="Votre nom" required />
+        <input class="input" type="email" name="email" [(ngModel)]="email" placeholder="Votre email" aria-label="Votre email" required email />
       </div>
-
-      <textarea
-        class="input"
-        name="message"
-        [(ngModel)]="message"
-        placeholder="Your message"
-        required
-      ></textarea>
+      <textarea class="input" name="message" [(ngModel)]="message" placeholder="Votre message" aria-label="Votre message" required></textarea>
 
       <button class="btn primary" type="submit" [disabled]="f.invalid || loading">
-        {{ loading ? 'Sending...' : 'Send Message' }}
+        {{ loading ? 'Envoi en cours...' : 'Envoyer' }}
       </button>
 
-      <p *ngIf="success" class="small" style="margin-top:10px; color:#9fffd7;">
-        ✅ Message sent!
-      </p>
-
-      <p *ngIf="error" class="small" style="margin-top:10px; color:#ff7aa8;">
-        ❌ Error sending message
-      </p>
+      <p *ngIf="success" class="status ok">Message envoyé, merci !</p>
+      <p *ngIf="error" class="status ko">L'envoi a échoué. Réessayez ou écrivez-moi directement par email.</p>
     </form>
   </div>
 </div>

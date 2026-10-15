@@ -1,38 +1,41 @@
-<div class="container">
-  <div class="card">
-    <h2>Projects</h2>
-    <p class="small">Selected technical & academic projects</p>
-  </div>
+<div class="page">
+  <h2>Projets</h2>
+  <p class="lead">Ce que j'ai construit, de l'infrastructure à l'application.</p>
 
-  <div class="grid">
-    <div class="card">
-      <h3>OpenStack Infrastructure</h3>
-      <p class="small">Nova • Neutron • Cinder • Keystone</p>
-      <p>
-        Installation et configuration d’une infrastructure OpenStack sur un environnement virtualisé.
-        Gestion des services compute, réseau, stockage et identité.
-      </p>
-      <span class="badge">2025 – En cours</span>
-    </div>
+  <div style="margin-top:28px">
+    <article class="project">
+      <div class="year">2026</div>
+      <div>
+        <h3>Reconstruction d'infrastructure après ransomware</h3>
+        <p>Migration d'ESXi vers Proxmox VE sur deux serveurs physiques, stockage ZFS/RAIDZ1, cluster HA, sauvegarde avec Proxmox Backup Server, réplication et basculement automatisés avec Bash et Ansible.</p>
+        <ul class="chips">
+          <li class="chip">Proxmox VE</li><li class="chip">ZFS</li><li class="chip">LXC</li><li class="chip">Ansible</li><li class="chip">Bash</li>
+        </ul>
+      </div>
+    </article>
 
-    <div class="card">
-      <h3>Full-Stack Web Application (MERN)</h3>
-      <p class="small">MongoDB • Express • React • Node.js</p>
-      <p>
-        Développement complet d’une application web avec API REST, front-end React
-        et base de données MongoDB. Gestion autonome du projet avec Git.
-      </p>
-      <span class="badge">2024 – 2025</span>
-    </div>
+    <article class="project">
+      <div class="year">2025 – 2026</div>
+      <div>
+        <h3>LanceHub, plateforme freelance en microservices</h3>
+        <p>Spring Boot et Angular, découverte de services avec Eureka, authentification Keycloak. Chat en temps réel et appels audio/vidéo via WebSocket. Suggestions de réponses avec un GPT-2 fine-tuné et recherche sémantique, amélioration et traduction de messages via l'API Groq (LLaMA 3.1).</p>
+        <p>Déployée sur un cloud OpenStack privé auto-administré (Nova, Neutron, Cinder, Keystone), automatisé avec Ansible, conteneurisé avec Docker et Kubernetes, supervisé par Prometheus et Grafana.</p>
+        <ul class="chips">
+          <li class="chip">Spring Boot</li><li class="chip">Angular</li><li class="chip">Keycloak</li><li class="chip">OpenStack</li><li class="chip">Kubernetes</li><li class="chip">Grafana</li>
+        </ul>
+      </div>
+    </article>
 
-    <div class="card">
-      <h3>Academic Projects</h3>
-      <p class="small">FlutterFlow • Symfony • Java</p>
-      <p>
-        Application mobile, application web MVC avec Symfony et application desktop Java.
-        Travail collaboratif et gestion de projet.
-      </p>
-      <span class="badge">Troisième année</span>
-    </div>
+    <article class="project">
+      <div class="year">2025</div>
+      <div>
+        <h3>DevsOnDeck, matching développeurs et entreprises</h3>
+        <p>Plateforme MERN où profils et postes sont associés selon jusqu'à 5 compétences techniques. API REST, frontend React complet, base MongoDB.</p>
+        <ul class="chips">
+          <li class="chip">MongoDB</li><li class="chip">Express</li><li class="chip">React</li><li class="chip">Node.js</li>
+        </ul>
+      </div>
+    </article>
+
   </div>
 </div>

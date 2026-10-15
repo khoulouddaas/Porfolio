@@ -1,37 +1,74 @@
-<div class="container">
-  <div class="card">
-    <p class="small">CLOUD • AUTOMATION • LEARNING</p>
-    <h1 style="margin:8px 0 10px;">
-      Bonjour, je m'appelle <span style="color:var(--pink)">Khouloud Daas</span>
-    </h1>
-
-    <p style="max-width:720px; opacity:.9;">
-      Étudiante en quatrième année d’ingénierie à l’école ESPRIT, spécialisée en Architecture IT
-      et Cloud Computing. Curieuse et motivée, je m’intéresse particulièrement aux domaines
-      du cloud, de l’automatisation et des environnements techniques.
-      Je suis actuellement en phase d’apprentissage et de découverte des pratiques DevOps
-      à travers des projets académiques et personnels.
-    </p>
-
-    <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
-      <a class="btn" routerLink="/projects">Voir mes projets</a>
-      <a class="btn" routerLink="/contact">Me contacter</a>
+<div class="page">
+  <section class="hero">
+    <div>
+      <h1>Khouloud Daas, ingénieure cloud &amp; DevOps</h1>
+      <p class="lead">
+        Étudiante en 5ème année à l'ESPRIT (Architecture IT &amp; Cloud Computing).
+        J'ai reconstruit seule une infrastructure serveur après une attaque ransomware,
+        et je développe aussi en full-stack.
+      </p>
+      <p class="lead">
+        Je cherche un stage de fin d'études (PFE) pré-embauche en Cloud, DevOps ou Full-Stack,
+        en présentiel ou hybride.
+      </p>
+      <div class="actions">
+        <a class="btn primary" routerLink="/contact">Me contacter</a>
+        <a class="btn" routerLink="/projects">Voir mes projets</a>
+        <a class="btn" href="Khouloud_Daas_CV.pdf" download>Télécharger mon CV</a>
+      </div>
     </div>
-  </div>
 
-  <div style="margin-top:18px; display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:14px;">
-    <div class="card">
-      <h3>Cloud & Infrastructure</h3>
-      <p class="small">Découverte • OpenStack • Virtualisation</p>
+    <div class="portrait">
+      <img src="profile.jpg" alt="Portrait de Khouloud Daas" />
     </div>
-    <div class="card">
-      <h3>Développement</h3>
-      <p class="small">Full-Stack • MERN • Web Applications</p>
-    </div>
-   <div class="card">
-  <h3>Workflows & Intégrations</h3>
-  <p class="small">n8n (début) • Webhooks • APIs</p>
-</div>
+  </section>
 
-  </div>
+  <section class="facts">
+    <div>
+      <h3>Infrastructure</h3>
+      <p class="small">Proxmox VE, OpenStack, ZFS, haute disponibilité, sauvegarde et reprise d'activité</p>
+    </div>
+    <div>
+      <h3>DevOps</h3>
+      <p class="small">Ansible, Docker, Kubernetes, Jenkins, Prometheus, Grafana</p>
+    </div>
+    <div>
+      <h3>Full-Stack</h3>
+      <p class="small">Spring Boot, Angular, MERN, API REST et WebSocket</p>
+    </div>
+  </section>
+
+  <section style="margin-top:clamp(40px,7vw,72px)">
+    <h2>Compétences</h2>
+    <div style="margin-top:24px">
+        <div class="skill-group"><h3>Langages</h3>
+          <ul class="chips"><li class="chip">JavaScript</li><li class="chip">TypeScript</li><li class="chip">Java</li><li class="chip">Python</li><li class="chip">PHP</li><li class="chip">HTML</li><li class="chip">CSS</li></ul></div>
+        <div class="skill-group"><h3>Frameworks</h3>
+          <ul class="chips"><li class="chip">React.js</li><li class="chip">Angular</li><li class="chip">Express.js</li><li class="chip">Spring Boot</li></ul></div>
+        <div class="skill-group"><h3>Cloud &amp; virtualisation</h3>
+          <ul class="chips"><li class="chip">Microsoft Azure</li><li class="chip">OpenStack</li><li class="chip">Proxmox VE</li><li class="chip">VMware ESXi</li></ul></div>
+        <div class="skill-group"><h3>Conteneurs &amp; orchestration</h3>
+          <ul class="chips"><li class="chip">Docker</li><li class="chip">Kubernetes</li><li class="chip">LXC</li></ul></div>
+        <div class="skill-group"><h3>CI/CD &amp; automatisation</h3>
+          <ul class="chips"><li class="chip">Jenkins</li><li class="chip">Ansible</li></ul></div>
+        <div class="skill-group"><h3>Monitoring</h3>
+          <ul class="chips"><li class="chip">Prometheus</li><li class="chip">Grafana</li></ul></div>
+        <div class="skill-group"><h3>Réseaux</h3>
+          <ul class="chips"><li class="chip">Switching</li><li class="chip">Routage</li><li class="chip">Wireless</li><li class="chip">CCNA</li></ul></div>
+        <div class="skill-group"><h3>Outils, OS &amp; scripting</h3>
+          <ul class="chips"><li class="chip">Git</li><li class="chip">GitHub</li><li class="chip">Linux (Ubuntu)</li><li class="chip">Windows</li><li class="chip">Bash</li></ul></div>
+        <div class="skill-group"><h3>Langues</h3>
+          <ul class="chips"><li class="chip">Français (courant)</li><li class="chip">Anglais (professionnel)</li></ul></div>
+      </div>
+    <div class="soft">
+        <h3>Compétences personnelles</h3>
+        <ul>
+          <li>Travail en équipe</li>
+          <li>Esprit d'analyse et résolution de problèmes</li>
+          <li>Autonomie et sens des responsabilités</li>
+          <li>Adaptabilité et amélioration continue</li>
+          <li>Attention aux détails</li>
+        </ul>
+      </div>
+  </section>
 </div>
